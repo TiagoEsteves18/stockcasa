@@ -2,7 +2,7 @@
 // Los datos (Back4App) nunca se guardan aquí: siempre se piden al servidor.
 // Estrategia "red primero": si hay internet se usa siempre la última versión publicada.
 
-const CACHE = 'stockcasa-v2';
+const CACHE = 'stockcasa-v3';
 const SHELL = [
   './', 'index.html', 'app.js', 'styles.css', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/apple-touch-icon.png',
