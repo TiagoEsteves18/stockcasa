@@ -2,7 +2,7 @@
 // Los datos (Back4App) nunca se guardan aquí: siempre se piden al servidor.
 // Estrategia "red primero": si hay internet se usa siempre la última versión publicada.
 
-const CACHE = 'stockcasa-v1';
+const CACHE = 'stockcasa-v2';
 const SHELL = [
   './', 'index.html', 'app.js', 'styles.css', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/apple-touch-icon.png',
@@ -25,6 +25,8 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
   if (event.request.method !== 'GET' || url.origin !== location.origin) return;
+  // El instalador de Android y el mensaje de compartir siempre se piden al servidor
+  if (url.pathname.endsWith('.apk') || url.pathname.endsWith('compartir.txt')) return;
 
   event.respondWith(
     fetch(event.request)

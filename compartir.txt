@@ -1,0 +1,13 @@
+¡Prueba Stock Casa! La despensa y la lista de la compra de casa, compartidas.
+
+Si tienes Android:
+1. Descarga la app: {apk}
+2. Ábrela. Si el móvil avisa, toca «Ajustes» y activa «Permitir de esta fuente».
+3. Vuelve atrás y pulsa «Instalar».
+
+Si tienes iPhone:
+1. Abre este enlace en Safari: {web}
+2. Toca el botón Compartir (el cuadrado con la flecha hacia arriba).
+3. Elige «Añadir a pantalla de inicio» y pulsa «Añadir».
+
+Después crea tu cuenta y únete a nuestra casa con el código {codigo}.
