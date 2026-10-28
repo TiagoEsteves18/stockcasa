@@ -1202,3 +1202,9 @@ button.store-line:active { transform: scale(.98); }
 .ingredient-toggles { flex-basis: 100%; display: flex; flex-wrap: wrap; gap: 6px; margin-left: 50px; }
 .mini-toggle { font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; border: 1.5px dashed var(--stroke); color: var(--text-2); background: transparent; }
 .mini-toggle.on { border-style: solid; border-color: var(--primary); color: var(--primary-dark); background: var(--primary-soft); }
+
+/* ---------- Que no se corte el texto en las tarjetas (antes "…") ---------- */
+.ellipsis, .ellipsis2 { white-space: normal !important; overflow: visible !important; text-overflow: clip !important; -webkit-line-clamp: unset !important; display: block; overflow-wrap: anywhere; }
+.tag, .tiny-tag { white-space: normal; max-width: 100%; overflow: visible; text-overflow: clip; }
+.store-line span, .suggest-card strong { white-space: normal; overflow-wrap: anywhere; }
+.suggest-card strong { min-height: 0; }
