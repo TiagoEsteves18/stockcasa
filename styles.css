@@ -1081,14 +1081,19 @@ button.store-line:active { transform: scale(.98); }
 :root[data-style="pixel"] .brand, :root[data-style="pixel"] .tab-header h1 {
   font-family: "Press Start 2P", monospace; font-size: 19px !important; line-height: 1.5; letter-spacing: 0; text-shadow: 3px 3px 0 var(--primary-soft);
 }
-:root[data-style="pixel"] .sheet-title h2, :root[data-style="pixel"] .section-title, :root[data-style="pixel"] .stat strong,
-:root[data-style="pixel"] .total, :root[data-style="pixel"] .spend-total, :root[data-style="pixel"] .recipe-hero-text h2 {
+:root[data-style="pixel"] .sheet-title h2, :root[data-style="pixel"] .section-title, :root[data-style="pixel"] .recipe-hero-text h2 {
   font-family: "Press Start 2P", monospace; letter-spacing: 0; line-height: 1.45;
 }
 :root[data-style="pixel"] .sheet-title h2, :root[data-style="pixel"] .recipe-hero-text h2 { font-size: 15px; }
 :root[data-style="pixel"] .section-title { font-size: 12.5px; }
-:root[data-style="pixel"] .stat strong { font-size: 20px; }
-:root[data-style="pixel"] .total, :root[data-style="pixel"] .spend-total { font-size: 22px; }
+/* Los números con la letra de píxel legible (Press Start 2P solo para títulos) */
+:root[data-style="pixel"] .stat strong, :root[data-style="pixel"] .total, :root[data-style="pixel"] .spend-total,
+:root[data-style="pixel"] .qty strong, :root[data-style="pixel"] .price, :root[data-style="pixel"] .count, :root[data-style="pixel"] .badge {
+  font-family: "Pixelify Sans", monospace; font-weight: 700; letter-spacing: .02em; font-variant-numeric: tabular-nums;
+}
+:root[data-style="pixel"] .stat strong { font-size: 32px; line-height: 1.1; }
+:root[data-style="pixel"] .total, :root[data-style="pixel"] .spend-total { font-size: 34px; }
+:root[data-style="pixel"] .qty strong { font-size: 22px; }
 :root[data-style="pixel"] .card, :root[data-style="pixel"] .stat, :root[data-style="pixel"] .search, :root[data-style="pixel"] .suggest-card,
 :root[data-style="pixel"] .idea-card { margin: 4px; width: calc(100% - 8px); }
 :root[data-style="pixel"] .stat, :root[data-style="pixel"] .search, :root[data-style="pixel"] .suggest-card, :root[data-style="pixel"] .idea-card,
@@ -1113,7 +1118,7 @@ button.store-line:active { transform: scale(.98); }
 :root[data-style="pixel"] .chip { background: var(--surface); color: var(--text); }
 :root[data-style="pixel"] .chip.checked { background: var(--primary); color: #fff; animation: none; }
 :root[data-style="pixel"] .thumb { border-radius: 0; image-rendering: pixelated; box-shadow: 0 0 0 3px var(--px); }
-:root[data-style="pixel"] .thumb.mono { font-family: "Press Start 2P", monospace; font-size: .62em; letter-spacing: 0; }
+:root[data-style="pixel"] .thumb.mono { font-family: "Pixelify Sans", monospace; font-weight: 700; font-size: 1.05em; letter-spacing: 0; }
 :root[data-style="pixel"] .tag { border-radius: 0; box-shadow: 0 0 0 2px currentColor; font-family: "Pixelify Sans", monospace; font-size: 12px; }
 :root[data-style="pixel"] .count { border-radius: 0; }
 :root[data-style="pixel"] .check { border-radius: 0; border: 0; box-shadow: 0 0 0 3px var(--px); }
@@ -1188,3 +1193,12 @@ button.store-line:active { transform: scale(.98); }
 .layer.sheet .comment-form { background: var(--surface); }
 .comment-form input { flex: 1; min-width: 0; min-height: 46px; padding: 0 14px; border-radius: var(--field-radius); border: 1.5px solid var(--stroke); background: var(--surface); outline: none; }
 .comment-form input:focus { border-color: var(--primary); }
+
+/* ---------- Recetas: opcional / no se descuenta / genéricos ---------- */
+.tag.neutral { background: var(--primary-softer); color: var(--text-2); }
+.match-line { display: flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; color: var(--success); margin-top: 2px; }
+.pantry-line { color: var(--success); }
+.editor-ingredient { flex-wrap: wrap; }
+.ingredient-toggles { flex-basis: 100%; display: flex; flex-wrap: wrap; gap: 6px; margin-left: 50px; }
+.mini-toggle { font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; border: 1.5px dashed var(--stroke); color: var(--text-2); background: transparent; }
+.mini-toggle.on { border-style: solid; border-color: var(--primary); color: var(--primary-dark); background: var(--primary-soft); }
